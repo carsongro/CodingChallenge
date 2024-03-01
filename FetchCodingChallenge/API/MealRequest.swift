@@ -51,7 +51,7 @@ final class MealRequest: Sendable {
         URL(string: urlString)
     }
     
-    /// Desired http method, for the meals API, the only option is GET
+    /// Desired http method, the only option is GET for the mealsdb API
     public let httpMethod = "GET"
     
     /// Construct request

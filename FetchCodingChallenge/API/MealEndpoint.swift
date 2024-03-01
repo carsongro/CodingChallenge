@@ -7,7 +7,7 @@
 
 import Foundation
 
-@frozen enum MealEndpoint: String, CaseIterable, Hashable {
+enum MealEndpoint: String, CaseIterable {
     /// Endpoint to filter results
     case filter = "filter.php"
     /// Endpoint to lookup an item
