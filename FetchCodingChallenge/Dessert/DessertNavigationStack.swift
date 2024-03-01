@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DessertNavigationStack: View {
-    @State private var viewModel = DessertViewModel()
+    @Environment(DessertViewModel.self) private var viewModel
     
     var body: some View {
         NavigationStack {

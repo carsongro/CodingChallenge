@@ -44,7 +44,7 @@ struct DessertDetailView: View, @unchecked Sendable {
             }
         }
         .navigationTitle(dessertItem.strMeal)
-        .onAppear {
+        .task(id: dessertItem.id) {
             getDessert()
         }
     }

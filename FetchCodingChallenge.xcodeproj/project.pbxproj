@@ -26,6 +26,9 @@
 		B8E483CB2B913939003C1594 /* MealLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483CA2B913939003C1594 /* MealLookupResponse.swift */; };
 		B8E483CD2B913BF0003C1594 /* DessertNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483CC2B913BF0003C1594 /* DessertNavigationStack.swift */; };
 		B8E483CF2B913C43003C1594 /* DessertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483CE2B913C43003C1594 /* DessertRow.swift */; };
+		B8ED4ECE2B922EB000454CEE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ED4ECD2B922EB000454CEE /* Extensions.swift */; };
+		B8ED4ED32B92306900454CEE /* AppDetailColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ED4ED22B92306900454CEE /* AppDetailColumn.swift */; };
+		B8ED4ED52B92306F00454CEE /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8ED4ED42B92306F00454CEE /* AppSidebarList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		B8E483CA2B913939003C1594 /* MealLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLookupResponse.swift; sourceTree = "<group>"; };
 		B8E483CC2B913BF0003C1594 /* DessertNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertNavigationStack.swift; sourceTree = "<group>"; };
 		B8E483CE2B913C43003C1594 /* DessertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRow.swift; sourceTree = "<group>"; };
+		B8ED4ECD2B922EB000454CEE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B8ED4ED22B92306900454CEE /* AppDetailColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailColumn.swift; sourceTree = "<group>"; };
+		B8ED4ED42B92306F00454CEE /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				B86BF9EF2B913F8F0003FB1C /* ViewModifiers.swift */,
+				B8ED4ECD2B922EB000454CEE /* Extensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 				B8E483AB2B9102D0003C1594 /* Preview Content */,
 				B8E483A52B9102CF003C1594 /* FetchCodingChallengeApp.swift */,
 				B8E483A72B9102CF003C1594 /* ContentView.swift */,
+				B8ED4ED12B92305900454CEE /* Navigation */,
 				B86BF9EE2B913F870003FB1C /* Other */,
 				B8E483B42B910339003C1594 /* API */,
 				B8E483B32B91032B003C1594 /* Dessert */,
@@ -141,6 +149,15 @@
 				B8E483CA2B913939003C1594 /* MealLookupResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B8ED4ED12B92305900454CEE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B8ED4ED22B92306900454CEE /* AppDetailColumn.swift */,
+				B8ED4ED42B92306F00454CEE /* AppSidebarList.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E483C92B913842003C1594 /* MealListItem.swift in Sources */,
+				B8ED4ED52B92306F00454CEE /* AppSidebarList.swift in Sources */,
 				B86BF9F02B913F8F0003FB1C /* ViewModifiers.swift in Sources */,
 				B8E483C72B913732003C1594 /* MealCategoryResponse.swift in Sources */,
 				B8E483C12B913085003C1594 /* MealRequest.swift in Sources */,
+				B8ED4ED32B92306900454CEE /* AppDetailColumn.swift in Sources */,
 				B8E483A82B9102CF003C1594 /* ContentView.swift in Sources */,
 				B86BF9F22B9141E00003FB1C /* DessertDetailView.swift in Sources */,
 				B8E483B92B910439003C1594 /* DessertListView.swift in Sources */,
@@ -233,6 +252,7 @@
 				B8E483CB2B913939003C1594 /* MealLookupResponse.swift in Sources */,
 				B8E483C32B913089003C1594 /* MealEndpoint.swift in Sources */,
 				B8E483BD2B910640003C1594 /* Meal.swift in Sources */,
+				B8ED4ECE2B922EB000454CEE /* Extensions.swift in Sources */,
 				B8E483B72B910427003C1594 /* DessertViewModel.swift in Sources */,
 				B8E483CD2B913BF0003C1594 /* DessertNavigationStack.swift in Sources */,
 			);

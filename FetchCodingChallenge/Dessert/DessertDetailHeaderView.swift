@@ -27,9 +27,9 @@ struct DessertDetailHeaderView: View {
         IoImageView(url: URL(string: dessert.strMealThumb))
             .resizable()
             .placeholder {
-                Image(systemName: "fork.knife.circle.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Color(.systemGroupedBackground)
+                    .frame(width: 220, height: 250)
+                    .clipped()
                     .accessibilityHidden(true)
             }
             .aspectRatio(contentMode: .fit)
@@ -41,9 +41,7 @@ struct DessertDetailHeaderView: View {
         IoImageView(url: URL(string: dessert.strMealThumb))
             .resizable()
             .placeholder {
-                Image(systemName: "fork.knife.circle.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Color(.systemGroupedBackground)
                     .frame(width: 220, height: 250)
                     .clipped()
                     .accessibilityHidden(true)

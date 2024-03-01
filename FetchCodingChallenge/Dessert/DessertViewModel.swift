@@ -10,6 +10,13 @@ import Foundation
 @Observable 
 class DessertViewModel: @unchecked Sendable {
     var desserts = [MealListItem]()
+    var searchText = ""
+    
+    var listedDesserts: [MealListItem] {
+        desserts
+            .filter { $0.matches(searchText) }
+            .sorted(by: { $0.strMeal.localizedCompare($1.strMeal) == .orderedAscending })
+    }
     
     private let mealService: MealService
     

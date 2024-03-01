@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.prefersTabNavigation) private var prefersTabNavigation
+    @State private var selection: MealListItem? = nil
+    @State private var viewModel = DessertViewModel()
+    
     var body: some View {
-        DessertNavigationStack()
+        Group {
+            if prefersTabNavigation {
+                DessertNavigationStack()
+            } else {
+                NavigationSplitView {
+                    AppSidebarList(selection: $selection)
+                } detail: {
+                    AppDetailColumn(selection: selection)
+                }
+            }
+        }
+        .environment(viewModel)
     }
 }
 
