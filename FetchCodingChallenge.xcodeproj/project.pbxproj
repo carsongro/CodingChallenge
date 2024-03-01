@@ -7,18 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B86BF9F02B913F8F0003FB1C /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BF9EF2B913F8F0003FB1C /* ViewModifiers.swift */; };
+		B86BF9F22B9141E00003FB1C /* DessertDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BF9F12B9141E00003FB1C /* DessertDetailView.swift */; };
+		B86BF9F62B9143F10003FB1C /* DessertDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BF9F52B9143F10003FB1C /* DessertDetailHeaderView.swift */; };
+		B86BFA012B9150D50003FB1C /* IoImage in Frameworks */ = {isa = PBXBuildFile; productRef = B86BFA002B9150D50003FB1C /* IoImage */; };
 		B8E483A62B9102CF003C1594 /* FetchCodingChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483A52B9102CF003C1594 /* FetchCodingChallengeApp.swift */; };
 		B8E483A82B9102CF003C1594 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483A72B9102CF003C1594 /* ContentView.swift */; };
 		B8E483AA2B9102D0003C1594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E483A92B9102D0003C1594 /* Assets.xcassets */; };
 		B8E483AD2B9102D0003C1594 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E483AC2B9102D0003C1594 /* Preview Assets.xcassets */; };
+		B8E483B72B910427003C1594 /* DessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483B62B910427003C1594 /* DessertViewModel.swift */; };
+		B8E483B92B910439003C1594 /* DessertListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483B82B910439003C1594 /* DessertListView.swift */; };
+		B8E483BD2B910640003C1594 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483BC2B910640003C1594 /* Meal.swift */; };
+		B8E483BF2B91307B003C1594 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483BE2B91307B003C1594 /* MealService.swift */; };
+		B8E483C12B913085003C1594 /* MealRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483C02B913085003C1594 /* MealRequest.swift */; };
+		B8E483C32B913089003C1594 /* MealEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483C22B913089003C1594 /* MealEndpoint.swift */; };
+		B8E483C72B913732003C1594 /* MealCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483C62B913732003C1594 /* MealCategoryResponse.swift */; };
+		B8E483C92B913842003C1594 /* MealListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483C82B913842003C1594 /* MealListItem.swift */; };
+		B8E483CB2B913939003C1594 /* MealLookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483CA2B913939003C1594 /* MealLookupResponse.swift */; };
+		B8E483CD2B913BF0003C1594 /* DessertNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483CC2B913BF0003C1594 /* DessertNavigationStack.swift */; };
+		B8E483CF2B913C43003C1594 /* DessertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E483CE2B913C43003C1594 /* DessertRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B86BF9EF2B913F8F0003FB1C /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		B86BF9F12B9141E00003FB1C /* DessertDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailView.swift; sourceTree = "<group>"; };
+		B86BF9F52B9143F10003FB1C /* DessertDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailHeaderView.swift; sourceTree = "<group>"; };
 		B8E483A22B9102CF003C1594 /* FetchCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E483A52B9102CF003C1594 /* FetchCodingChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCodingChallengeApp.swift; sourceTree = "<group>"; };
 		B8E483A72B9102CF003C1594 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8E483A92B9102D0003C1594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8E483AC2B9102D0003C1594 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8E483B62B910427003C1594 /* DessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel.swift; sourceTree = "<group>"; };
+		B8E483B82B910439003C1594 /* DessertListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListView.swift; sourceTree = "<group>"; };
+		B8E483BC2B910640003C1594 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		B8E483BE2B91307B003C1594 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		B8E483C02B913085003C1594 /* MealRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRequest.swift; sourceTree = "<group>"; };
+		B8E483C22B913089003C1594 /* MealEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEndpoint.swift; sourceTree = "<group>"; };
+		B8E483C62B913732003C1594 /* MealCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategoryResponse.swift; sourceTree = "<group>"; };
+		B8E483C82B913842003C1594 /* MealListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListItem.swift; sourceTree = "<group>"; };
+		B8E483CA2B913939003C1594 /* MealLookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLookupResponse.swift; sourceTree = "<group>"; };
+		B8E483CC2B913BF0003C1594 /* DessertNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertNavigationStack.swift; sourceTree = "<group>"; };
+		B8E483CE2B913C43003C1594 /* DessertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +55,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86BFA012B9150D50003FB1C /* IoImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B86BF9EE2B913F870003FB1C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B86BF9EF2B913F8F0003FB1C /* ViewModifiers.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		B8E483992B9102CF003C1594 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +89,14 @@
 		B8E483A42B9102CF003C1594 /* FetchCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				B8E483A52B9102CF003C1594 /* FetchCodingChallengeApp.swift */,
-				B8E483A72B9102CF003C1594 /* ContentView.swift */,
 				B8E483A92B9102D0003C1594 /* Assets.xcassets */,
 				B8E483AB2B9102D0003C1594 /* Preview Content */,
+				B8E483A52B9102CF003C1594 /* FetchCodingChallengeApp.swift */,
+				B8E483A72B9102CF003C1594 /* ContentView.swift */,
+				B86BF9EE2B913F870003FB1C /* Other */,
+				B8E483B42B910339003C1594 /* API */,
+				B8E483B32B91032B003C1594 /* Dessert */,
+				B8E483B52B9103AB003C1594 /* Models */,
 			);
 			path = FetchCodingChallenge;
 			sourceTree = "<group>";
@@ -65,6 +107,40 @@
 				B8E483AC2B9102D0003C1594 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8E483B32B91032B003C1594 /* Dessert */ = {
+			isa = PBXGroup;
+			children = (
+				B8E483B62B910427003C1594 /* DessertViewModel.swift */,
+				B8E483CC2B913BF0003C1594 /* DessertNavigationStack.swift */,
+				B8E483B82B910439003C1594 /* DessertListView.swift */,
+				B8E483CE2B913C43003C1594 /* DessertRow.swift */,
+				B86BF9F12B9141E00003FB1C /* DessertDetailView.swift */,
+				B86BF9F52B9143F10003FB1C /* DessertDetailHeaderView.swift */,
+			);
+			path = Dessert;
+			sourceTree = "<group>";
+		};
+		B8E483B42B910339003C1594 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B8E483BE2B91307B003C1594 /* MealService.swift */,
+				B8E483C02B913085003C1594 /* MealRequest.swift */,
+				B8E483C22B913089003C1594 /* MealEndpoint.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B8E483B52B9103AB003C1594 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8E483BC2B910640003C1594 /* Meal.swift */,
+				B8E483C62B913732003C1594 /* MealCategoryResponse.swift */,
+				B8E483C82B913842003C1594 /* MealListItem.swift */,
+				B8E483CA2B913939003C1594 /* MealLookupResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +159,9 @@
 			dependencies = (
 			);
 			name = FetchCodingChallenge;
+			packageProductDependencies = (
+				B86BFA002B9150D50003FB1C /* IoImage */,
+			);
 			productName = FetchCodingChallenge;
 			productReference = B8E483A22B9102CF003C1594 /* FetchCodingChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +190,9 @@
 				Base,
 			);
 			mainGroup = B8E483992B9102CF003C1594;
+			packageReferences = (
+				B86BF9FF2B9150D50003FB1C /* XCRemoteSwiftPackageReference "IoImage" */,
+			);
 			productRefGroup = B8E483A32B9102CF003C1594 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +219,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E483C92B913842003C1594 /* MealListItem.swift in Sources */,
+				B86BF9F02B913F8F0003FB1C /* ViewModifiers.swift in Sources */,
+				B8E483C72B913732003C1594 /* MealCategoryResponse.swift in Sources */,
+				B8E483C12B913085003C1594 /* MealRequest.swift in Sources */,
 				B8E483A82B9102CF003C1594 /* ContentView.swift in Sources */,
+				B86BF9F22B9141E00003FB1C /* DessertDetailView.swift in Sources */,
+				B8E483B92B910439003C1594 /* DessertListView.swift in Sources */,
+				B86BF9F62B9143F10003FB1C /* DessertDetailHeaderView.swift in Sources */,
+				B8E483BF2B91307B003C1594 /* MealService.swift in Sources */,
+				B8E483CF2B913C43003C1594 /* DessertRow.swift in Sources */,
 				B8E483A62B9102CF003C1594 /* FetchCodingChallengeApp.swift in Sources */,
+				B8E483CB2B913939003C1594 /* MealLookupResponse.swift in Sources */,
+				B8E483C32B913089003C1594 /* MealEndpoint.swift in Sources */,
+				B8E483BD2B910640003C1594 /* Meal.swift in Sources */,
+				B8E483B72B910427003C1594 /* DessertViewModel.swift in Sources */,
+				B8E483CD2B913BF0003C1594 /* DessertNavigationStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Carson-Gross.FetchCodingChallenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Carson-Gross.FetchCodingChallenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,6 +442,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B86BF9FF2B9150D50003FB1C /* XCRemoteSwiftPackageReference "IoImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/carsongro/IoImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B86BFA002B9150D50003FB1C /* IoImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B86BF9FF2B9150D50003FB1C /* XCRemoteSwiftPackageReference "IoImage" */;
+			productName = IoImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8E4839A2B9102CF003C1594 /* Project object */;
 }

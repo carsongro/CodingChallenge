@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "ioimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/carsongro/IoImage",
+      "state" : {
+        "revision" : "7c503aa4568d44ed7e4d4219d76dc05b8c7c35d0",
+        "version" : "2.7.1"
+      }
+    }
+  ],
+  "version" : 2
+}
