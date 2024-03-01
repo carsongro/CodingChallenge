@@ -24,7 +24,7 @@ struct DessertDetailHeaderView: View {
     }
     
     private var fullBleedContent: some View {
-        IoImageView(url: URL(string: dessert.strMealThumb))
+        IoImageView(url: URL(string: dessert.strMealThumb.safelyUnwrapped))
             .resizable()
             .placeholder {
                 Color(.systemGroupedBackground)
@@ -38,7 +38,7 @@ struct DessertDetailHeaderView: View {
     
     let wideClipShape = RoundedRectangle(cornerRadius: 20, style: .continuous)
     private var wideContent: some View {
-        IoImageView(url: URL(string: dessert.strMealThumb))
+        IoImageView(url: URL(string: dessert.strMealThumb.safelyUnwrapped))
             .resizable()
             .placeholder {
                 Color(.systemGroupedBackground)

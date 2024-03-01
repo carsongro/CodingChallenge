@@ -18,7 +18,7 @@ struct DessertRow: View {
     var body: some View {
         NavigationLink(value: dessert) {
             HStack {
-                IoImageView(url: URL(string: dessert.strMealThumb))
+                IoImageView(url: URL(string: dessert.strMealThumb.safelyUnwrapped))
                     .resizable()
                     .placeholder {
                         Image(systemName: "fork.knife.circle.fill")

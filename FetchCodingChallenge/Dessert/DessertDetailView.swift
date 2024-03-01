@@ -21,11 +21,13 @@ struct DessertDetailView: View, @unchecked Sendable {
                 Section { } header: { DessertDetailHeaderView(dessert: dessertItem).listRowSeparator(.hidden)}
                 
                 if let dessert {
-                    Section {
-                        Text(dessert.strInstructions)
-                    } header: { Text("Instructions") }
+                    if let instructions = dessert.strInstructions {
+                        Section {
+                            Text(instructions)
+                        } header: { Text("Instructions") }
+                    }
                     
-                    if !dessert.ingredients.isEmpty {
+                    if !dessert.formattedIngredients.isEmpty {
                         Section {
                             ForEach(Array(dessert.formattedIngredients.enumerated()), id: \.offset) { _, ingredient in
                                 Text(ingredient)

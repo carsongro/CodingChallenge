@@ -13,8 +13,8 @@ struct Meal: Codable, Identifiable, Equatable, MealPreview {
     let strDrinkAlternate: String?
     let strCategory: String?
     let strArea: String?
-    let strInstructions: String
-    let strMealThumb: String
+    let strInstructions: String?
+    let strMealThumb: String?
     let strTags: String?
     let strYoutube: String?
     let strIngredient1: String?
@@ -65,64 +65,30 @@ struct Meal: Codable, Identifiable, Equatable, MealPreview {
 
 // MARK: Computed Properties
 
-typealias Ingredient = (measurement: String?, ingredient: String?)
-
 extension Meal {
     var formattedIngredients: [String] {
         [
-            (strMeasure1 ?? "") + " " + (strIngredient1 ?? ""),
-            (strMeasure2 ?? "") + " " + (strIngredient2 ?? ""),
-            (strMeasure3 ?? "") + " " + (strIngredient3 ?? ""),
-            (strMeasure4 ?? "") + " " + (strIngredient4 ?? ""),
-            (strMeasure5 ?? "") + " " + (strIngredient5 ?? ""),
-            (strMeasure6 ?? "") + " " + (strIngredient6 ?? ""),
-            (strMeasure7 ?? "") + " " + (strIngredient7 ?? ""),
-            (strMeasure8 ?? "") + " " + (strIngredient8 ?? ""),
-            (strMeasure9 ?? "") + " " + (strIngredient9 ?? ""),
-            (strMeasure10 ?? "") + " " + (strIngredient10 ?? ""),
-            (strMeasure11 ?? "") + " " + (strIngredient11 ?? ""),
-            (strMeasure12 ?? "") + " " + (strIngredient12 ?? ""),
-            (strMeasure13 ?? "") + " " + (strIngredient13 ?? ""),
-            (strMeasure14 ?? "") + " " + (strIngredient14 ?? ""),
-            (strMeasure15 ?? "") + " " + (strIngredient15 ?? ""),
-            (strMeasure16 ?? "") + " " + (strIngredient16 ?? ""),
-            (strMeasure17 ?? "") + " " + (strIngredient17 ?? ""),
-            (strMeasure18 ?? "") + " " + (strIngredient18 ?? ""),
-            (strMeasure19 ?? "") + " " + (strIngredient19 ?? ""),
-            (strMeasure20 ?? "") + " " + (strIngredient20 ?? "")
+            strMeasure1.safelyUnwrapped + " " + strIngredient1.safelyUnwrapped,
+            strMeasure2.safelyUnwrapped + " " + strIngredient2.safelyUnwrapped,
+            strMeasure3.safelyUnwrapped + " " + strIngredient3.safelyUnwrapped,
+            strMeasure4.safelyUnwrapped + " " + strIngredient4.safelyUnwrapped,
+            strMeasure5.safelyUnwrapped + " " + strIngredient5.safelyUnwrapped,
+            strMeasure6.safelyUnwrapped + " " + strIngredient6.safelyUnwrapped,
+            strMeasure7.safelyUnwrapped + " " + strIngredient7.safelyUnwrapped,
+            strMeasure8.safelyUnwrapped + " " + strIngredient8.safelyUnwrapped,
+            strMeasure9.safelyUnwrapped + " " + strIngredient9.safelyUnwrapped,
+            strMeasure10.safelyUnwrapped + " " + strIngredient10.safelyUnwrapped,
+            strMeasure11.safelyUnwrapped + " " + strIngredient11.safelyUnwrapped,
+            strMeasure12.safelyUnwrapped + " " + strIngredient12.safelyUnwrapped,
+            strMeasure13.safelyUnwrapped + " " + strIngredient13.safelyUnwrapped,
+            strMeasure14.safelyUnwrapped + " " + strIngredient14.safelyUnwrapped,
+            strMeasure15.safelyUnwrapped + " " + strIngredient15.safelyUnwrapped,
+            strMeasure16.safelyUnwrapped + " " + strIngredient16.safelyUnwrapped,
+            strMeasure17.safelyUnwrapped + " " + strIngredient17.safelyUnwrapped,
+            strMeasure18.safelyUnwrapped + " " + strIngredient18.safelyUnwrapped,
+            strMeasure19.safelyUnwrapped + " " + strIngredient19.safelyUnwrapped,
+            strMeasure20.safelyUnwrapped + " " + strIngredient20.safelyUnwrapped
         ].filter { $0.count > 2 }
-    }
-    
-    /// A tuple containing the measurement and ingredient, filtering out empty values from the API
-    var ingredients: [Ingredient] {
-        [
-            (strMeasure1, strIngredient1),
-            (strMeasure2, strIngredient2),
-            (strMeasure3, strIngredient3),
-            (strMeasure4, strIngredient4),
-            (strMeasure5, strIngredient5),
-            (strMeasure6, strIngredient6),
-            (strMeasure7, strIngredient7),
-            (strMeasure8, strIngredient8),
-            (strMeasure9, strIngredient9),
-            (strMeasure10, strIngredient10),
-            (strMeasure11, strIngredient11),
-            (strMeasure12, strIngredient12),
-            (strMeasure13, strIngredient13),
-            (strMeasure14, strIngredient14),
-            (strMeasure15, strIngredient15),
-            (strMeasure16, strIngredient16),
-            (strMeasure17, strIngredient17),
-            (strMeasure18, strIngredient18),
-            (strMeasure19, strIngredient19),
-            (strMeasure20, strIngredient20)
-        ].filter {
-            if let ingredient = $0.ingredient {
-                !ingredient.isEmpty
-            } else {
-                false
-            }
-        }
     }
 }
 
@@ -251,5 +217,5 @@ extension Meal {
 protocol MealPreview {
     var id: String { get }
     var strMeal: String { get }
-    var strMealThumb: String { get }
+    var strMealThumb: String? { get }
 }

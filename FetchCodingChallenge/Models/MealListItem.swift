@@ -10,7 +10,7 @@ import Foundation
 struct MealListItem: Codable, Identifiable, Hashable, MealPreview {
     let id: String
     let strMeal: String
-    let strMealThumb: String
+    let strMealThumb: String?
 }
 
 // MARK: CodingKeys

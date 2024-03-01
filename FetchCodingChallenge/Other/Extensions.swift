@@ -29,3 +29,9 @@ extension PrefersTabNavigationEnvironmentKey: UITraitBridgedEnvironmentKey {
     }
 }
 #endif
+
+extension String? {
+    var safelyUnwrapped: String {
+        self ?? ""
+    }
+}
