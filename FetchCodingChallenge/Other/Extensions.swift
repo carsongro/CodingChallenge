@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PrefersTabNavigationEnvironmentKey: EnvironmentKey {
-    static var defaultValue: Bool = false
+    static let defaultValue: Bool = false
 }
 
 extension EnvironmentValues {

@@ -7,28 +7,24 @@
 
 @preconcurrency import UIKit
 
+protocol MealServiceProtocol {
+    func execute<T: Codable>(_ request: MealRequest) async throws -> T
+}
+
 /// Primary API Service object to get meal data
-actor MealService {
-    /// Shared singleton instance
-    static let shared = MealService()
-    
-    private init() {}
+struct MealService: MealServiceProtocol, Sendable {
     
     /// An `NSCache` for storing request data in memory
-    private let cache = NSCache<NSString, CacheEntry>()
-    
-    enum MealServiceError: Error {
-        case failedToCreateRequest, failedToGetData, urlError
-    }
+    private let cache = MealServiceCache()
     
     /// A function to execute a `MealRequest` and caches it in memory
     /// - Parameter request: A `MealRequest` to execute
     /// - Returns: A generic codable type
     public func execute<T: Codable>(_ request: MealRequest) async throws -> T {
         guard let url = request.url else { throw MealServiceError.urlError }
-        let urlString = url.absoluteString as NSString
+        let urlString = url.absoluteString
         
-        if let item = cache.object(forKey: urlString)?.item {
+        if let item = await cache.object(forKey: urlString)?.item {
             let data = switch item {
             case .inProgress(let task):
                 try await task.value
@@ -42,20 +38,20 @@ actor MealService {
             return try await loadData(from: request)
         }
         
-        cache.setObject(CacheEntry(item: .inProgress(task)), forKey: urlString)
+        await cache.setObject(CacheEntry(item: .inProgress(task)), forKey: urlString)
         
         do {
             let data = try await task.value
             let result = try JSONDecoder().decode(T.self, from: data)
-            cache.setObject(CacheEntry(item: .ready(data)), forKey: urlString)
+            await cache.setObject(CacheEntry(item: .ready(data)), forKey: urlString)
             return result
         } catch {
-            cache.removeObject(forKey: urlString)
+            await cache.removeObject(forKey: urlString)
             throw error
         }
     }
     
-    // MARK: Private Helpers
+    // MARK: Helpers
     
     private func request(from mealRequest: MealRequest) -> URLRequest? {
         guard let url = mealRequest.url else {
@@ -77,19 +73,6 @@ actor MealService {
     }
 }
 
-// MARK: Cache Entry
-
-extension MealService {
-    private enum CacheEntryItem {
-        case ready(Data)
-        case inProgress(Task<Data, Error>)
-    }
-    
-    private class CacheEntry {
-        let item: CacheEntryItem
-        
-        init(item: CacheEntryItem) {
-            self.item = item
-        }
-    }
+enum MealServiceError: Error {
+    case failedToCreateRequest, failedToGetData, urlError
 }

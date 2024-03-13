@@ -11,4 +11,3 @@ struct MealCategoryResponse: Codable {
     let meals: [MealListItem]
 }
 
-

@@ -27,10 +27,10 @@ struct DessertDetailView: View, @unchecked Sendable {
                         } header: { Text("Instructions") }
                     }
                     
-                    if !dessert.formattedIngredients.isEmpty {
+                    if !dessert.ingredients.isEmpty {
                         Section {
-                            ForEach(Array(dessert.formattedIngredients.enumerated()), id: \.offset) { _, ingredient in
-                                Text(ingredient)
+                            ForEach(Array(dessert.ingredients.filter { !$0.name.isEmpty }.enumerated()), id: \.offset) { _, ingredient in
+                                Text(ingredient.measurement + " " + ingredient.name)
                             }
                         } header: { Text("Ingredients") }
                     }
